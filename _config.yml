@@ -1,0 +1,18 @@
+# Setup
+title:        Beauty is life
+tagline:      
+baseurl:      ""
+paginate:     1
+locale:       "en"
+
+# About/contact
+author:
+  name:       Z Peng
+  url:        http://github.com/zhongpenggeo/ 
+
+# Gems
+gems:
+  - jekyll-paginate
+
+#Others
+markdown: kramdown
