@@ -23,8 +23,9 @@ do
     f1=`echo ${NA%.*}`
     f=`echo ${f1##*/}`
 	# match original filename and cut number in filename;
-	ff=`echo "$f"|sed -e "s/-/_/g"`
+	ff=`echo "$f"|sed -e "s/[0-9]-[0-9]*-//g"`
+	ff2=`echo "$ff"|sed -e "s/[0-9]-//g"`
 	# rename
-    NEWNA=$TM_NA-$ff.md
+    NEWNA=$TM_NA-$ff2.md
     mv $NA $NEWNA
 done
