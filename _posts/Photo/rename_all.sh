@@ -20,7 +20,7 @@ do
 	# time past one day each loop, 86400 seconds eual 1 day
 	TM=`echo "$TM+86400"|bc`
 	# time format as 2008-1-2
-	TM_NA=`date "$TN_B $TM seconds" +"%Y-%m-%d"`
+	TM_NA=`date -d "$TM_B $TM seconds" +"%Y-%m-%d"`
     f1=`echo ${NA%.*}`
     f=`echo ${f1##*/}`
 	# match original filename and cut number in filename;
