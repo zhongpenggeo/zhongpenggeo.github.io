@@ -53,7 +53,7 @@
           'content': window.store[key].content
         });
 
-      var results = idx.search(searchTerm); // Get lunr to perform a search
+      var results = this.search(searchTerm); // Get lunr to perform a search
       displaySearchResults(results, window.store); // We'll write this in the next section
     }
    });
