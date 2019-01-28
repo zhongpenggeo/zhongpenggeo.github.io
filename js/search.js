@@ -14,7 +14,7 @@ jQuery(function() {
   // Wait for the data to load and add it to lunr
   window.data.then(function(loaded_data){
     $.each(loaded_data, function(index, value){
-      window.idx.this.add(
+      window.this.add(
         $.extend({ "id": index }, value)
       );
     });
