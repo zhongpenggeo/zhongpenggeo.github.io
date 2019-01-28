@@ -1,62 +1,58 @@
-(function() {
-  function displaySearchResults(results, store) {
-    var searchResults = document.getElementById('search-results');
+jQuery(function() {
+  // Initialize lunr with the fields to be searched, plus the boost.
+  window.idx = lunr(function () {
+    this.field('id');
+    this.field('title');
+    this.field('content', { boost: 10 });
+    this.field('author');
+    this.field('categories');
+  });
 
-    if (results.length) { // Are there any results?
-      var appendString = '';
+  // Get the generated search_data.json file so lunr.js can search it locally.
+  window.data = $.getJSON('/search_data.json');
 
-      for (var i = 0; i < results.length; i++) {  // Iterate over the results
-        var item = store[results[i].ref];
-        appendString += '<li><a href="' + item.url + '"><h3>' + item.title + '</h3></a>';
-        appendString += '<p>' + item.content.substring(0, 150) + '...</p></li>';
-      }
+  // Wait for the data to load and add it to lunr
+  window.data.then(function(loaded_data){
+    $.each(loaded_data, function(index, value){
+      window.idx.add(
+        $.extend({ "id": index }, value)
+      );
+    });
+  });
 
-      searchResults.innerHTML = appendString;
-    } else {
-      searchResults.innerHTML = '<li>No results found</li>';
-    }
-  }
+  // Event when the form is submitted
+  $("#site_search").submit(function(event){
+      event.preventDefault();
+      var query = $("#search_box").val(); // Get the value for the text field
+      var results = window.idx.search(query); // Get lunr to perform a search
+      display_search_results(results); // Hand the results off to be displayed
+  });
 
-  function getQueryVariable(variable) {
-    var query = window.location.search.substring(1);
-    var vars = query.split('&');
+  function display_search_results(results) {
+    var $search_results = $("#search_results");
 
-    for (var i = 0; i < vars.length; i++) {
-      var pair = vars[i].split('=');
+    // Wait for data to load
+    window.data.then(function(loaded_data) {
 
-      if (pair[0] === variable) {
-        return decodeURIComponent(pair[1].replace(/\+/g, '%20'));
-      }
-    }
-  }
+      // Are there any results?
+      if (results.length) {
+        $search_results.empty(); // Clear any old results
 
-  var searchTerm = getQueryVariable('query');
+        // Iterate over the results
+        results.forEach(function(result) {
+          var item = loaded_data[result.ref];
 
-  if (searchTerm) {
-    document.getElementById('search-box').setAttribute("value", searchTerm);
+          // Build a snippet of HTML for this result
+          var appendString = '<li><a href="' + item.url + '">' + item.title + '</a></li>';
 
-    // Initalize lunr with the fields it will be searching on. I've given title
-    // a boost of 10 to indicate matches on this field are more important.
-   var idx = lunr(function () {
-            this.field('id');
-            this.field('title', { boost: 10 });
-            this.field('author');
-            this.field('category');
-            this.field('content');
-            for (var key in window.store) { 
-                this.add({
-                    'id': key,
-                    'title': window.store[key].title,
-                    'author': window.store[key].author,
-                    'category': window.store[key].category,
-                    'content': window.store[key].content
-                });
-
-                
-            }
+          // Add the snippet to the collection of results.
+          $search_results.append(appendString);
         });
-
-        var results = idx.search(searchTerm); // Get lunr to perform a search
-        displaySearchResults(results, window.store); // We'll write this in the next section 
+      } else {
+        // If there are no results, let the user know.
+        $search_results.html('<li>No results found.<br/>Please check spelling, spacing, yada...</li>');
+      }
+    });
   }
-})();
+});
+
