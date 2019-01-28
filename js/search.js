@@ -1,6 +1,6 @@
 jQuery(function() {
   // Initialize lunr with the fields to be searched, plus the boost.
-  window.idx = lunr(function () {
+  idx = lunr(function () {
     this.field('id');
     this.field('title');
     this.field('content', { boost: 10 });
@@ -14,7 +14,7 @@ jQuery(function() {
   // Wait for the data to load and add it to lunr
   window.data.then(function(loaded_data){
     $.each(loaded_data, function(index, value){
-      window.this.add(
+      this.add(
         $.extend({ "id": index }, value)
       );
     });
@@ -24,7 +24,7 @@ jQuery(function() {
   $("#site_search").submit(function(event){
       event.preventDefault();
       var query = $("#search_box").val(); // Get the value for the text field
-      var results = window.idx.search(query); // Get lunr to perform a search
+      var results = idx.search(query); // Get lunr to perform a search
       display_search_results(results); // Hand the results off to be displayed
   });
 
