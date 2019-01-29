@@ -432,8 +432,8 @@ th {
   width: 54px;
   height: 54px;
   display: block;
-  background: #aaaaaa url(/images/arrow.png) no-repeat center center;
-  background-color: #0099CC;
+  background: #0099cc url(/images/arrow.png) no-repeat center center;
+  background-color: #aaaaaa;
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
   border-radius: 7px;
@@ -442,6 +442,6 @@ th {
   transition: 1s;
 }
 #back-top a:hover {
-  background-color: #777;
+  background-color: #40cfff;
 }
 
