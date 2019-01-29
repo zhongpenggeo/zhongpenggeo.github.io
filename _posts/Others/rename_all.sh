@@ -14,7 +14,7 @@
 ALL=`ls *.md`
 # assume the rename time begin in a month ago;
 TM=0
-TM_B=2018-11-05
+TM_B=2017-11-05
 for NA in $ALL
 do
 
@@ -26,7 +26,7 @@ do
 	if [[ "$Yr" =~ "201" ]]; then
         a=3
     else
-		TM=`echo "$TM+86400"|bc`
+		TM=`echo "$TM+186400"|bc`
 		# time format as 2008-1-2
 		TM_NA=`date -d "$TM_B $TM seconds" +"%Y-%m-%d"`
 		# match original filename and cut number in filename;

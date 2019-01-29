@@ -11,7 +11,7 @@
  
 ALL=`ls *.md`
 TM=0
-TM_BEGIN=2018-10-1
+TM_BEGIN=2018-10-01
 # get folder name
 DIR=`echo "$PWD"|gawk -F'/' '{print $NF}'`
 for NA in $ALL
