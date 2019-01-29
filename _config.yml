@@ -15,4 +15,4 @@ gems:
   - jekyll-paginate
 
 #Others
-markdown: kramdown
+#markdown: kramdown
