@@ -432,8 +432,8 @@ th {
   width: 54px;
   height: 54px;
   display: block;
-  background: #0099cc url(/images/arrow.png) no-repeat center center;
-  background-color: #aaaaaa;
+  background: #aaaaaa url(/images/arrow.png) no-repeat center center;
+  background-color: #bbbbbb;
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
   border-radius: 7px;
