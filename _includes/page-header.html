@@ -1,10 +1,10 @@
 <section class="page-header">
-  <h1 class="project-name">{{ site.title }}</h1>
+	<h1 href="{{ site.url }}" class="project-name">{{ site.title }}</h1>
   <h2 class="project-tagline">{{ site.tagline }}</h2>
-  <a href="{{ site.url }}" class="btn">HomePage</a>
+  <a href="{{ site.url }}/sites/archives.html" class="btn">Archives</a>
   <a href="{{ site.url }}/categories" class="btn">Categories</a>
   <a href="{{ site.url }}/categories/Photo" class="btn">Photo</a>
-  <form action="{{ site.baseurl }}/search.html" method="get">
+  <form action="{{ site.baseurl }}/sites/search.html" method="get">
     <label for="search-box">Search</label>
     <input style="color:black;" type="text" id="search-box" name="query">
     <input style="backgroundColor:blue;" type="submit" value="search">
