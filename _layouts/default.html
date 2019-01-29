@@ -6,13 +6,13 @@
   <body>
     {% include page-header.html %}
     <section class="main-content">
-      
+	  <h1>{{ page.title }}</h1>
+      {% include toc.html html=content %} 
       {{ content }}
 
-	  
       <div id="back-top">
         <a href="#top" title="Top"></a>
-	    <script type="text/javascript" src="/js/backtop.js"></script>
+	    <script type="text/javascript" src="https://unpkg.com/vanilla-back-to-top@7.2.0/dist/vanilla-back-to-top.min.js"></script>
       </div>
 
       <div class="PageNavigation">

@@ -192,7 +192,7 @@ a:hover { text-decoration: underline; }
 .site-footer-credits { color: #819198; }
 
 .PageNavigation {
-  font-size: 14px;
+  font-size: 3em;
   display: block;
   width: auto;
   overflow: hidden;
