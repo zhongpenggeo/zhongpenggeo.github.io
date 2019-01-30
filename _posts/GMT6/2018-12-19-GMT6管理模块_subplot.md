@@ -30,7 +30,7 @@ row，col：指定画第几行第几列的图
 -C  
 
 脚本：  
-```
+```sh
 #!/bin/bash
 
 gmt begin map jpg
@@ -51,7 +51,3 @@ gmt clear all
 #gmt end
 ```
 ![map.jpg](https://upload-images.jianshu.io/upload_images/7955445-5b03638502591795.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
----
-#### 更多资料
-**[GMT6.0的学习笔记](https://www.jianshu.com/p/ac52b407efa1)**

@@ -46,7 +46,7 @@ GMT6.0全新改版后，开头都要说一声：我要开始画图了。
 > gmt figure mapw jpg
 
 脚本：
-```
+```sh
 #!/bin/bash
 
 gmt begin gmt-map pdf,jpg

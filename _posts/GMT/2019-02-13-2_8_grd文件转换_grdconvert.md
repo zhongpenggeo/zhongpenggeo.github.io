@@ -10,20 +10,20 @@ categories:
 #### 问题
 当R选项的范围比实际的范围小的时候，绘制出来的图会与边框有很多缝隙,或者直接会发生偏移，如图：  
 
-![nanhai_surfer.jpg](https://upload-images.jianshu.io/upload_images/7955445-a418c70de8ecbc68.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/440)
+![nanhai_surfer.jpg](https://upload-images.jianshu.io/upload_images/7955445-a418c70de8ecbc68.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/440)  
 
 而正确的结果应当是：  
 
-![nanhai_netcdf.jpg](https://upload-images.jianshu.io/upload_images/7955445-ef5e207180efae38.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/440)
+![nanhai_netcdf.jpg](https://upload-images.jianshu.io/upload_images/7955445-ef5e207180efae38.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/440)  
 
 
-而且，就算用grdcut把文件区域裁剪下来还是可能会出现这些问题。
+而且，就算用grdcut把文件区域裁剪下来还是可能会出现这些问题。  
 
 ---
 #### 解决办法
 最好的解决办法就是把其他格式的grd文件转化成netcdf标准格式    
 **命令：grdconvert**  
-用法：
+用法：  
 > gmt grdconvert inputgrd=id -Goutgrd=id 
 
 有时候加入-N，不输出头段数据，在之后使用grdraster时有用
@@ -41,6 +41,4 @@ id表示grd文件格式的代码
 通常grdconvert可以自动识别grd的格式，完成转换，若不能识别，再使用a.grd=id手动加入id网格文件格式。
 GMT netCDF format (32-bit float, COARDS, CF-1.5)
 
----
-**更多资料**  
-[GMT目录](https://www.jianshu.com/p/321f67983c42)
+

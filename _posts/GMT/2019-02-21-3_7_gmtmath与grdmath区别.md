@@ -10,6 +10,4 @@ grdmath对grd数据运算，各种运算
 SDIST：大圆距离就算‘  
 所以上式为：计算grd到90/25的距离，再乘以111.13得到temp.grd  
 
----
-**更多资料**  
-[GMT目录](https://www.jianshu.com/p/321f67983c42)
+

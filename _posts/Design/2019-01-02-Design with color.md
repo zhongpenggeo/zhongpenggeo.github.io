@@ -9,8 +9,8 @@ categories:
 ## 1. Complementary
 often work best when one is the main and the other is an accent;(contrast??)
 
-![enter description here](https://www.github.com/zhongpenggeo/Blogs/raw/master/imags/1546153289373.png)
-![enter description here](https://www.github.com/zhongpenggeo/Blogs/raw/master/imags/1546153628080.png)
+![enter description here](https://www.github.com/zhongpenggeo/Blogs/raw/master/imags/1546153289373.png)  
+![enter description here](https://www.github.com/zhongpenggeo/Blogs/raw/master/imags/1546153628080.png)  
 ## 2. Triads
 **harmonize wll**
 
