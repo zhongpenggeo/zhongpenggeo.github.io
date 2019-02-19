@@ -11,13 +11,14 @@
  
 ALL=`ls *.md`
 TM=0
-TM_B=2019-02-16
+#TM_B=2019-02-16
 # get folder name
 DIR=`echo "$PWD"|gawk -F'/' '{print $NF}'`
 for NA in $ALL
 do
-	TM=`echo "$TM+86400"|bc`
-    TM_FM=`date -d "$TM_B $TM seconds" +"%Y-%m-%d %H:%M:%S"`
+#	TM=0 #`echo "$TM+86400"|bc`
+#    TM_FM=`date -d "$TM_B $TM seconds" +"%Y-%m-%d %H:%M:%S"`
+	TM_FM=`date +"%Y-%m-%d %H:%M:%S"`
 	F_LINE=`sed  '/^$/d' $NA|gawk 'NR==1 {print $1}'`
 	if [ $F_LINE != '---' ]; then
     	TMP=`echo ${NA%.*}`
