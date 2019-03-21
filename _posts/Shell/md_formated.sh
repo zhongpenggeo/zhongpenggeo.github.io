@@ -27,7 +27,7 @@ do
 		sed -i "1i\- $DIR" $NA
 		sed -i '1i\categories:' $NA
     	sed -i "1i\date: $TM_FM" $NA
-    	sed -i "1i\title: `echo "$FI"|sed -e 's/-/ /g'|sed -e '/_/ /g' ` " $NA
+    	sed -i "1i\title: `echo "$FI"|sed -e 's/-/ /g'|sed -e 's/_/ /g' ` " $NA
     	sed -i '1i\---' $NA
 	fi
 	f1=`echo ${NA%.*}`
