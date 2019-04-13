@@ -1,10 +1,10 @@
 #/*************************************************************************
 # ****** md_formated.sh
 # ************   Introduction     *************	
-#	add head information in md file 
+#	add head information in md file and add time info to filename 
 # ************      Copyright     *****************
 # Writeen by PengZhong, ZJU, Sat Jan 26 15:38:29 2019
-# Last modified:	 
+# Last modified: 2019-2-18 
 # ***********************************************************************
  
 #!/bin/bash
@@ -27,7 +27,7 @@ do
 		sed -i "1i\- $DIR" $NA
 		sed -i '1i\categories:' $NA
     	sed -i "1i\date: $TM_FM" $NA
-    	sed -i "1i\title: $FI" $NA
+    	sed -i "1i\title: `echo "$FI"|sed -e 's/-/ /g'|sed -e 's/_/ /g' ` " $NA
     	sed -i '1i\---' $NA
 	fi
 	f1=`echo ${NA%.*}`

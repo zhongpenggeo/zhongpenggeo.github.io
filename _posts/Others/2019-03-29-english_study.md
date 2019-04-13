@@ -1,3 +1,9 @@
+---
+title: english study 
+date: 2019-03-29 09:40:06
+categories:
+- Others
+---
 ### some tricks
 
 English learning is a long-term, difficult and boring process. So I must find some ways to make it easier and  more interesting. Here are some of my tricks:
