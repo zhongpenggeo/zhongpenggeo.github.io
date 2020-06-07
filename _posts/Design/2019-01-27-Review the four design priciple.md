@@ -13,16 +13,16 @@ categories:
 
 ## e.g. Modify your design
 #### original
-![enter description here](https://www.github.com/zhongpenggeo/Blogs/raw/master/imags/1546152206865.png)
+![enter description here](imags/1546152206865.png)
 
 #### proximity
-![enter description here](https://www.github.com/zhongpenggeo/Blogs/raw/master/imags/1546152226576.png)
+![enter description here](imags/1546152226576.png)
 
 #### alignment
-![enter description here](https://www.github.com/zhongpenggeo/Blogs/raw/master/imags/1546152263047.png)
+![enter description here](imags/1546152263047.png)
 
 #### repetition
-![enter description here](https://www.github.com/zhongpenggeo/Blogs/raw/master/imags/1546152286257.png)
+![enter description here](imags/1546152286257.png)
 
 #### contrast
-![enter description here](https://www.github.com/zhongpenggeo/Blogs/raw/master/imags/1546152363536.png)
+![enter description here](imags/1546152363536.png)

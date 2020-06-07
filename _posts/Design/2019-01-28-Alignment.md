@@ -10,7 +10,7 @@ categories:
 2. white spcing, or the position on the page
 
 ### e.g. soft edge and hard edge
-![enter description here](https://www.github.com/zhongpenggeo/Blogs/raw/master/imags/1546137664024.png)  
+![enter description here](imags/1546137664024.png)  
 
 ### e.g. improvement
 ![enter description here](https://www.github.com/zhongpenggeo/Blogs/raw/master/imags/1546139711379.png)  

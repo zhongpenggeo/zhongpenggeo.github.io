@@ -43,3 +43,11 @@ The CLI uses the Docker REST API to control or interact with the Docker daemon t
 **Docker Daemon**:  
 **Docker Volumes**:are the best way to store the persistent data that your apps consume and create  
 ![img](../../imags/0_rgvX6TzfW4HqNpiQ.png)  
+
+#### Example: save jupyter data
+From jupyter docker documentation, it specifies the working diretory of
+the container as `/home/jvvyan/`.
+```sh
+docker run -p 8888:8888 -v curie:/home/jovyan/ brmather/pycurious
+```
+

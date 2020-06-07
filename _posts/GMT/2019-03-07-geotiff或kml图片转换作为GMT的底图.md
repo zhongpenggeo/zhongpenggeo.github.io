@@ -39,23 +39,22 @@ rm gmt.*
 ```
 - map.tiff
 
-![map.tiff](https://upload-images.jianshu.io/upload_images/7955445-177aadac875de437.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![map.tiff](imags/7955445-177aadac875de437.png)
 - 转换裁剪后的图片：
 
-![translate.jpg](https://upload-images.jianshu.io/upload_images/7955445-8ebcf066d62dc2bb.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/540)
+![translate.jpg](imags/7955445-8ebcf066d62dc2bb.jpg)
 
 ### Bug
 如果你的图片不是WGS84坐标（比如说做了墨卡托投影），那么gdal无法读取图片中的经纬度（因为它不是经纬度格式）。  
 如何确保你的tiff图片是WGS84坐标系统且没有做投影：  
 > gdalinfo input.tiff
 
-![image.png](https://upload-images.jianshu.io/upload_images/7955445-4d5ee0bcea7204a4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image.png](imags/7955445-4d5ee0bcea7204a4.png)
 
 这种说明是正常的没有做投影的；
 
-![image.png](https://upload-images.jianshu.io/upload_images/7955445-969dc08bd8de4007.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image.png](imags/7955445-969dc08bd8de4007.png)
 这种是做过墨卡托投影的，无法直接作为gmt的输入图片。切记！
-
 
 ---
 参考资料：  
