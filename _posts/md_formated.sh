@@ -4,22 +4,32 @@
 #	add head information in md file and add time info to filename 
 # ************      Copyright     *****************
 # Writeen by PengZhong, ZJU, Sat Jan 26 15:38:29 2019
-# Last modified: 2019-2-18 
+# Last modified: 2020-6-8 
 # ***********************************************************************
  
 #!/bin/bash
  
 ALL=`ls *.md`
-TM=0
-#TM_B=2019-02-16
+
+# 默认以空格/tab为分割符，导致如果文件名中有空格就无法处理，
+# 这里设置为\n，就可以让带空格的文件名视为一个变量。
+IFS=$'\n'
+
+
 # get folder name
 DIR=`echo "$PWD"|gawk -F'/' '{print $NF}'`
 for NA in $ALL
 do
-#	TM=0 #`echo "$TM+86400"|bc`
-#    TM_FM=`date -d "$TM_B $TM seconds" +"%Y-%m-%d %H:%M:%S"`
-	TM_FM=`date +"%Y-%m-%d %H:%M:%S"`
+	# %w 表示生成文件的时间，%y表示修改文件的时间
+	TM=`stat $NA -c %y|gawk '{print $1}'`
+	FM=`stat $NA -c %y|gawk '{print $2}'|cut -c 1-8`
+    TM_FM="$TM $FM"
+
+	# 把文件名中的_和-都换成空格，因为文件名字（文章题目）实际上不带这些字符
 	F_LINE=`sed  '/^$/d' $NA|gawk 'NR==1 {print $1}'`
+
+	# 加入头文件信息，符合jekelly的规则
+	# 确保之前没有加入过头文件信息
 	if [ $F_LINE != '---' ]; then
     	TMP=`echo ${NA%.*}`
     	FI=`echo ${TMP##*/}`
@@ -30,19 +40,22 @@ do
     	sed -i "1i\title: `echo "$FI"|sed -e 's/-/ /g'|sed -e 's/_/ /g' ` " $NA
     	sed -i '1i\---' $NA
 	fi
+
+	# 去除后缀
 	f1=`echo ${NA%.*}`
     f=`echo ${f1##*/}`
-    Yr=`echo "$f"|cut -c 1-3`
-    if [[ "$Yr" =~ "201" ]]; then
-		# a=3 is onthing, jsut do a action.
+	# 取出后缀
+    Yr=`echo "$f"|cut -c 1-2`
+
+	# 确保这些文件没有被命名过,2020
+    if [[ "$Yr" =~ "202" ]]; then
+		# a=3 is nothing, jsut do a action.
         a=3
     else
-    	# time format as 2008-1-2
-    	TM_NA=`date -d "$TM_B $TM seconds" +"%Y-%m-%d"`
     	# match original filename and cut number in filename;
-    	ff=`echo "$f"|sed -e "s/-/_/g"`
+    	ff=`echo "$f"|sed -e "s/-/_/g"|sed -e "s/ /_/g"`
     	# rename
-    	NEWNA=$TM_NA-$ff.md
+    	NEWNA=$TM-$ff.md
     	mv $NA $NEWNA
     fi
 done

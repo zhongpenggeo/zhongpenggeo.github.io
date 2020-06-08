@@ -16,12 +16,10 @@ if K is width，H is depth,
 
 we  can have at least $K^H$ piesces.
 
-
-
-![image-20200514084819795](../imags/image-20200514084819795.png)
+![image-20200514084819795](/imags/image-20200514084819795.png)
 
 越靠近input的layer越重要
 
-![image-20200514085300144](../imags/image-20200514085300144.png)
+![image-20200514085300144](/imags/image-20200514085300144.png)
 
 （上图表现各层对noise的敏感度，越往后noise影响越小；

@@ -14,7 +14,7 @@ categories:
 
 由卷积实现；
 
-![img](imags/v2-2e9a9de3ce6493bbf9c0a6dead4e3ba8_720w.jpg)
+![img](/imags/v2-2e9a9de3ce6493bbf9c0a6dead4e3ba8_720w.jpg)
 
 #### 2. CNN与全连接层
 

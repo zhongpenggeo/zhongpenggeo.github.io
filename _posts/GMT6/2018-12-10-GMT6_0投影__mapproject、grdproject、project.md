@@ -6,7 +6,7 @@ categories:
 ---
 ### 1. project
 从二维grd中提取某条测线，可以用grdtrack投影为剖面；如下如图所示：  
-![profile.jpg](https://upload-images.jianshu.io/upload_images/7955445-60d090ac410fa1cd.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/440)  
+![profile.jpg](/imags/7955445-60d090ac410fa1cd.jpg)  
 参见：[从grd中提取剖面](https://www.jianshu.com/p/ad9ae6ef93b1)
 
 ### 2. mapproject

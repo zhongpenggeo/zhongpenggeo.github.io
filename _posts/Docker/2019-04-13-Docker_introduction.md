@@ -25,7 +25,7 @@ A Docker image plus the command `docker run image_name` creates and starts a con
 #### container registry
 a platform include lots of image. [Docker Hub](https://hub.docker.com/) is the largest registry and the default.
 
-![img](../../imags/docker-containerized-appliction-blue-border_2.png)  
+![img](/imags/docker-containerized-appliction-blue-border_2.png)  
 
 ## Docker essentials
 #### docker platform
@@ -42,7 +42,7 @@ The CLI uses the Docker REST API to control or interact with the Docker daemon t
 **Docker Client**:  
 **Docker Daemon**:  
 **Docker Volumes**:are the best way to store the persistent data that your apps consume and create  
-![img](../../imags/0_rgvX6TzfW4HqNpiQ.png)  
+![img](/imags/0_rgvX6TzfW4HqNpiQ.png)  
 
 #### Example: save jupyter data
 From jupyter docker documentation, it specifies the working diretory of
