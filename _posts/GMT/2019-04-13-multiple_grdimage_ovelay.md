@@ -23,4 +23,4 @@ gmt grdimage $JJ $RR tmp.grd  -C$CPT2 -Q -K -O >>$P
 #### example 
 plot two edges on one figure.    
 
-![1555146252211](imags/1555146252211.png)
+![1555146252211](../../imags/1555146252211.png)

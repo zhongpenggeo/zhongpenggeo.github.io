@@ -53,7 +53,7 @@ nearneighbor命令将会指定数据范围和格网间隔，从而即可确定�
 注：相同的数据，surface和nearneighbor命令格网化的结果差别较大。   
 此外，GMT还提供了两个格网数据提取和信息查询的命令，分别是grdraster和grdinfo，这里就不在详细介绍了。  
 
-![clipboard.png](imags/7955445-0710a8e736bfd289.png)  
+![clipboard.png](../../imags/7955445-0710a8e736bfd289.png)  
 
 
 3.  surface预处理

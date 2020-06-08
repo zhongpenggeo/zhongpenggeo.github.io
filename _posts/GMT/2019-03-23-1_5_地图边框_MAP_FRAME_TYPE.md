@@ -19,7 +19,7 @@ MAP_FRAME_TYPE 底图边框类型 [fancy]
 只能使用 plain 底图，即便 MAP_BASEMAP_TYPE 被设置为 fancy。
 
 
-![clipboard.png](imags/7955445-43e3e0151058064e.png)
+![clipboard.png](../../imags/7955445-43e3e0151058064e.png)
 
 **更多资料**  
 [GMT目录](https://www.jianshu.com/p/321f67983c42)

@@ -10,9 +10,9 @@ grd2cpt：可以不需要设定色彩范围和间隔，自动根据你的数据�
 
 -Z：加入该项则使用离散的cpt（注意同一cpt可以分为离散和连续）；  
 
-![1.png](imags/7955445-5c5cb2729d7c033a.png)  
+![1.png](../../imags/7955445-5c5cb2729d7c033a.png)  
 
-![2.png](https://upload-images.jianshu.io/upload_images/7955445-7cc15e8a460c8fe9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440)
+![2.png](../../imags/7955445-7cc15e8a460c8fe9.png)
 
 **更多资料**
 [GMT目录](https://www.jianshu.com/p/321f67983c42)
