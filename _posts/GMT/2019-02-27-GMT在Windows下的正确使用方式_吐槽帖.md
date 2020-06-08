@@ -23,11 +23,11 @@ categories:
 
 在这句话中，R选项少了-，明显是个错误，但是在git bash中没有输出错误信息。
 
-![image.png](../../imags/7955445-8fa9ee6414cb01ec.png)  
+![image.png](/imags/7955445-8fa9ee6414cb01ec.png)  
 
 在powershell中：
 
-![image.png](../../imags/7955445-1f9e76515ba825d4.png)  
+![image.png](/imags/7955445-1f9e76515ba825d4.png)  
 
 有错误输出！    
 奇怪的powershell和git bash调用的都是同一个安装地址的GMT，所以错误信息的根源可能在于git bash。  

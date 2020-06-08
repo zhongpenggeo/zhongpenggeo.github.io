@@ -10,11 +10,11 @@ categories:
 #### 问题
 当R选项的范围比实际的范围小的时候，绘制出来的图会与边框有很多缝隙,或者直接会发生偏移，如图：  
 
-![nanhai_surfer.jpg](../../imags/7955445-a418c70de8ecbc68.jpg)  
+![nanhai_surfer.jpg](/imags/7955445-a418c70de8ecbc68.jpg)  
 
 而正确的结果应当是：  
 
-![nanhai_netcdf.jpg](../../imags/7955445-ef5e207180efae38.jpg)  
+![nanhai_netcdf.jpg](/imags/7955445-ef5e207180efae38.jpg)  
 
 
 而且，就算用grdcut把文件区域裁剪下来还是可能会出现这些问题。  
