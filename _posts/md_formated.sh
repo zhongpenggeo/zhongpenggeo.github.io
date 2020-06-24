@@ -37,7 +37,8 @@ do
 		sed -i "1i\- $DIR" $NA
 		sed -i '1i\categories:' $NA
     	sed -i "1i\date: $TM_FM" $NA
-    	sed -i "1i\title: `echo "$FI"|sed -e 's/-/ /g'|sed -e 's/_/ /g' ` " $NA
+    	#sed -i "1i\title: `echo "$FI"|sed -e 's/_/ /g'|sed -e 's/-/ /g' ` " $NA
+		sed -i "1i\title: `echo "$FI"|sed -e 's/_/ /g'` " $NA
     	sed -i '1i\---' $NA
 	fi
 
@@ -48,7 +49,7 @@ do
     Yr=`echo "$f"|cut -c 1-2`
 
 	# 确保这些文件没有被命名过,2020
-    if [[ "$Yr" =~ "202" ]]; then
+    if [[ "$Yr" =~ "20" ]]; then
 		# a=3 is nothing, jsut do a action.
         a=3
     else
